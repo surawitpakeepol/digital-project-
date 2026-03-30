@@ -1,0 +1,606 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: game_graphics.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "game_graphics.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "game_graphics"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : game_graphics
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\XilinkProject\digital_01\game_graphics.vhd" into library work
+Parsing entity <game_graphics>.
+Parsing architecture <Behavioral> of entity <game_graphics>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <game_graphics> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\XilinkProject\digital_01\game_graphics.vhd" Line 114. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <game_graphics>.
+    Related source file is "C:\XilinkProject\digital_01\game_graphics.vhd".
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_1_OUT> created at line 78.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_3_OUT> created at line 78.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_230_OUT> created at line 57.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_348_OUT> created at line 57.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_294_OUT> created at line 57.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_347_OUT> created at line 57.
+    Found 10-bit adder for signal <n0485[9:0]> created at line 80.
+    Found 10-bit adder for signal <n0486[9:0]> created at line 80.
+    Found 10-bit adder for signal <n0513> created at line 79.
+    Found 13-bit adder for signal <n0568> created at line 112.
+    Found 13-bit adder for signal <n0570> created at line 112.
+    Found 32x18-bit Read Only RAM for signal <_n0732>
+    Found 1-bit 22-to-1 multiplexer for signal <dx[4]_X_4_o_Mux_14_o> created at line 80.
+    Found 1-bit 12-to-1 multiplexer for signal <score[9]_GND_4_o_Mux_345_o> created at line 59.
+    Found 1-bit 12-to-1 multiplexer for signal <score[9]_GND_4_o_Mux_398_o> created at line 59.
+    Found 1-bit 4-to-1 multiplexer for signal <is_text> created at line 75.
+    Found 1-bit 12-to-1 multiplexer for signal <_n0695> created at line 59.
+    Found 10-bit comparator lessequal for signal <n0006> created at line 79
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_6_o> created at line 79
+    Found 10-bit comparator lessequal for signal <n0009> created at line 79
+    Found 10-bit comparator greater for signal <pixel_y[9]_BUS_0003_LessThan_9_o> created at line 79
+    Found 32-bit comparator lessequal for signal <n0013> created at line 80
+    Found 32-bit comparator greater for signal <GND_4_o_dx[31]_LessThan_11_o> created at line 80
+    Found 32-bit comparator lessequal for signal <n0016> created at line 80
+    Found 32-bit comparator greater for signal <GND_4_o_dy[31]_LessThan_13_o> created at line 80
+    Found 10-bit comparator lessequal for signal <n0030> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_18_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_22_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0041> created at line 52
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_28_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0047> created at line 52
+    Found 10-bit comparator lessequal for signal <n0056> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_38_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0062> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_42_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0070> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_46_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_50_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0081> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_66_o> created at line 52
+    Found 10-bit comparator greater for signal <n0096> created at line 52
+    Found 10-bit comparator lessequal for signal <n0105> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_82_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0117> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_86_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0126> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_91_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0129> created at line 52
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_93_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_95_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_97_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0141> created at line 52
+    Found 10-bit comparator lessequal for signal <n0146> created at line 52
+    Found 10-bit comparator greater for signal <n0148> created at line 52
+    Found 10-bit comparator lessequal for signal <n0154> created at line 52
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_109_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0161> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_111_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_115_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0172> created at line 52
+    Found 10-bit comparator lessequal for signal <n0182> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_127_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_131_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0199> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_139_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0208> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_143_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_147_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_151_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0228> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_159_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_167_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0242> created at line 52
+    Found 10-bit comparator lessequal for signal <n0249> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_175_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_177_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0256> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_179_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_185_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_187_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_191_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_195_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0293> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_203_o> created at line 52
+    Found 10-bit comparator greater for signal <pixel_x[9]_GND_4_o_LessThan_207_o> created at line 52
+    Found 10-bit comparator greater for signal <n0304> created at line 52
+    Found 10-bit comparator lessequal for signal <n0313> created at line 52
+    Found 11-bit comparator lessequal for signal <n0329> created at line 58
+    Found 11-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_233_o> created at line 58
+    Found 11-bit comparator lessequal for signal <n0332> created at line 58
+    Found 11-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_235_o> created at line 58
+    Found 11-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_245_o> created at line 62
+    Found 11-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_247_o> created at line 62
+    Found 11-bit comparator lessequal for signal <n0381> created at line 58
+    Found 11-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_297_o> created at line 58
+    Found 11-bit comparator lessequal for signal <n0412> created at line 58
+    Found 11-bit comparator greater for signal <GND_4_o_GND_4_o_LessThan_350_o> created at line 58
+    Found 12-bit comparator lessequal for signal <n0442> created at line 112
+    Found 13-bit comparator greater for signal <BUS_0004_GND_4_o_LessThan_402_o> created at line 112
+    Found 10-bit comparator lessequal for signal <n0447> created at line 112
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_404_o> created at line 112
+    Found 12-bit comparator lessequal for signal <n0453> created at line 112
+    Found 13-bit comparator greater for signal <BUS_0005_GND_4_o_LessThan_407_o> created at line 112
+    Found 10-bit comparator lessequal for signal <n0458> created at line 112
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_4_o_LessThan_411_o> created at line 113
+    Summary:
+	inferred   1 RAM(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred  88 Comparator(s).
+	inferred  26 Multiplexer(s).
+Unit <game_graphics> synthesized.
+
+Synthesizing Unit <div_10u_7u>.
+    Related source file is "".
+    Found 17-bit adder for signal <GND_5_o_b[6]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_5_o_b[6]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_5_o_b[6]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_5_o_b[6]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_5_o_b[6]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_5_o_b[6]_add_11_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_5_o_b[6]_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[6]_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_5_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_5_o_add_19_OUT[9:0]> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_7u> synthesized.
+
+Synthesizing Unit <div_10u_4u>.
+    Related source file is "".
+    Found 14-bit adder for signal <GND_6_o_b[3]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_6_o_b[3]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_6_o_b[3]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_6_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[3]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_19_OUT[9:0]> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_4u> synthesized.
+
+Synthesizing Unit <mod_10u_4u>.
+    Related source file is "".
+    Found 14-bit adder for signal <n0333> created at line 0.
+    Found 14-bit adder for signal <GND_7_o_b[3]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <n0337> created at line 0.
+    Found 13-bit adder for signal <GND_7_o_b[3]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <n0341> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_b[3]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <n0345> created at line 0.
+    Found 11-bit adder for signal <GND_7_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <n0349> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[3]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <n0353> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0357> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <n0361> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <n0365> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_17_OUT> created at line 0.
+    Found 10-bit adder for signal <n0369> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_19_OUT> created at line 0.
+    Found 10-bit adder for signal <n0373> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_21_OUT> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  22 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred 101 Multiplexer(s).
+Unit <mod_10u_4u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x18-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 75
+ 10-bit adder                                          : 40
+ 11-bit adder                                          : 6
+ 11-bit subtractor                                     : 6
+ 12-bit adder                                          : 6
+ 13-bit adder                                          : 8
+ 14-bit adder                                          : 6
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+# Comparators                                          : 132
+ 10-bit comparator greater                             : 41
+ 10-bit comparator lessequal                           : 54
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 8
+ 12-bit comparator lessequal                           : 6
+ 13-bit comparator greater                             : 2
+ 13-bit comparator lessequal                           : 4
+ 14-bit comparator lessequal                           : 4
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 374
+ 1-bit 12-to-1 multiplexer                             : 3
+ 1-bit 2-to-1 multiplexer                              : 355
+ 1-bit 22-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 6
+ 3-bit 2-to-1 multiplexer                              : 6
+ 4-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <game_graphics>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0732> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 18-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0486[9:0]<4:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <game_graphics> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x18-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 53
+ 10-bit adder                                          : 23
+ 10-bit adder carry in                                 : 20
+ 11-bit subtractor                                     : 6
+ 13-bit adder                                          : 2
+ 4-bit adder carry in                                  : 2
+# Comparators                                          : 132
+ 10-bit comparator greater                             : 41
+ 10-bit comparator lessequal                           : 54
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 8
+ 12-bit comparator lessequal                           : 6
+ 13-bit comparator greater                             : 2
+ 13-bit comparator lessequal                           : 4
+ 14-bit comparator lessequal                           : 4
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 374
+ 1-bit 12-to-1 multiplexer                             : 3
+ 1-bit 2-to-1 multiplexer                              : 355
+ 1-bit 22-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 6
+ 3-bit 2-to-1 multiplexer                              : 6
+ 4-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <game_graphics> ...
+
+Optimizing unit <mod_10u_4u> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block game_graphics, actual ratio is 11.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : game_graphics.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 572
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 1
+#      LUT2                        : 21
+#      LUT3                        : 65
+#      LUT4                        : 87
+#      LUT5                        : 97
+#      LUT6                        : 164
+#      MUXCY                       : 72
+#      MUXF7                       : 10
+#      VCC                         : 1
+#      XORCY                       : 45
+# IO Buffers                       : 73
+#      IBUF                        : 70
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  443  out of   5720     7%  
+    Number used as Logic:               443  out of   5720     7%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    443
+   Number with an unused Flip Flop:     443  out of    443   100%  
+   Number with an unused LUT:             0  out of    443     0%  
+   Number of fully used LUT-FF pairs:     0  out of    443     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          73
+ Number of bonded IOBs:                  73  out of    102    71%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 22.888ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1393821 / 3
+-------------------------------------------------------------------------
+Delay:               22.888ns (Levels of Logic = 19)
+  Source:            score<8> (PAD)
+  Destination:       rgb<0> (PAD)
+
+  Data Path: score<8> to rgb<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.222   1.362  score_8_IBUF (score_8_IBUF)
+     LUT4:I1->O            5   0.205   1.059  score[9]_PWR_4_o_mod_224/Mmux_a[6]_a[9]_MUX_506_o11 (score[9]_PWR_4_o_mod_224/a[6]_a[9]_MUX_506_o)
+     LUT5:I0->O           13   0.203   1.297  score[9]_PWR_4_o_mod_224/Mmux_a[6]_a[9]_MUX_516_o11 (score[9]_PWR_4_o_mod_224/Madd_a[9]_GND_7_o_add_15_OUT_Madd_lut<6>)
+     LUT6:I0->O            7   0.203   0.878  score[9]_PWR_4_o_mod_224/BUS_0008_INV_380_o11 (score[9]_PWR_4_o_mod_224/BUS_0008_INV_380_o)
+     LUT3:I1->O            1   0.203   0.924  score[9]_PWR_4_o_mod_224/Mmux_a[6]_a[9]_MUX_526_o11 (score[9]_PWR_4_o_mod_224/a[6]_a[9]_MUX_526_o)
+     LUT6:I1->O           19   0.203   1.300  score[9]_PWR_4_o_mod_224/BUS_0009_INV_391_o1 (score[9]_PWR_4_o_mod_224/BUS_0009_INV_391_o)
+     LUT3:I0->O            1   0.205   0.827  score[9]_PWR_4_o_mod_224/Mmux_a[0]_a[9]_MUX_542_o121 (score[9]_PWR_4_o_mod_224/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<2>)
+     LUT6:I2->O            1   0.203   0.580  score[9]_PWR_4_o_mod_224/BUS_0010_INV_402_o1_SW0 (N45)
+     LUT6:I5->O            6   0.205   1.089  score[9]_PWR_4_o_mod_224/BUS_0010_INV_402_o1 (score[9]_PWR_4_o_mod_224/BUS_0010_INV_402_o)
+     LUT5:I0->O            3   0.203   0.995  score[9]_PWR_4_o_mod_224/Mmux_a[0]_a[9]_MUX_552_o131 (score[9]_PWR_4_o_mod_224/a[3]_a[9]_MUX_549_o)
+     LUT6:I1->O            3   0.203   0.995  score[9]_PWR_4_o_mod_224/Mmux_o21 (s1<1>)
+     LUT6:I1->O            1   0.203   0.000  Mmux_score[9]_GND_4_o_Mux_398_o_6 (Mmux_score[9]_GND_4_o_Mux_398_o_6)
+     MUXF7:I1->O           1   0.140   0.827  Mmux_score[9]_GND_4_o_Mux_398_o_5_f7 (Mmux_score[9]_GND_4_o_Mux_398_o_5_f7)
+     LUT5:I1->O            1   0.203   0.924  s1<3>3 (score[9]_GND_4_o_Mux_398_o)
+     LUT6:I1->O            2   0.203   0.617  GND_4_o_GND_4_o_OR_166_o14 (GND_4_o_GND_4_o_OR_166_o17)
+     LUT3:I2->O            2   0.205   0.617  GND_4_o_GND_4_o_OR_166_o15 (GND_4_o_GND_4_o_OR_166_o)
+     LUT5:I4->O            1   0.205   0.827  Mmux_rgb1_SW0 (N22)
+     LUT6:I2->O            1   0.203   0.579  Mmux_rgb1 (rgb_0_OBUF)
+     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+    ----------------------------------------
+    Total                     22.888ns (7.191ns logic, 15.697ns route)
+                                       (31.4% logic, 68.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.32 secs
+ 
+--> 
+
+Total memory usage is 4518692 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

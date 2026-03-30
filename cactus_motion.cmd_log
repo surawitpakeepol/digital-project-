@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/cactus_motion.xst" -ofn "C:/XilinkProject/digital_01/cactus_motion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-3 cactus_motion.ngc cactus_motion.ngd  
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/cactus_motion.xst" -ofn "C:/XilinkProject/digital_01/cactus_motion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-3 cactus_motion.ngc cactus_motion.ngd  
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/cactus_motion.xst" -ofn "C:/XilinkProject/digital_01/cactus_motion.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 cactus_motion.ngc cactus_motion.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cactus_motion_map.ncd cactus_motion.ngd cactus_motion.pcf 
+par -w -intstyle ise -ol high -mt off cactus_motion_map.ncd cactus_motion.ncd cactus_motion.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cactus_motion.twx cactus_motion.ncd -o cactus_motion.twr cactus_motion.pcf 

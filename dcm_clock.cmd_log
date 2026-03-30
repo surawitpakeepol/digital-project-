@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/dcm_clock.xst" -ofn "C:/XilinkProject/digital_01/dcm_clock.syr" 
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/dcm_clock.xst" -ofn "C:/XilinkProject/digital_01/dcm_clock.syr" 

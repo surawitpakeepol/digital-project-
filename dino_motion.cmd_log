@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/dino_motion.xst" -ofn "C:/XilinkProject/digital_01/dino_motion.syr" 

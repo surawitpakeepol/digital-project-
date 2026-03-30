@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/vga_sync.xst" -ofn "C:/XilinkProject/digital_01/vga_sync.syr" 

@@ -1,0 +1,6 @@
+vhdl work "vga_sync.vhd"
+vhdl work "game_graphics.vhd"
+vhdl work "dino_motion.vhd"
+vhdl work "dcm_clock.vhd"
+vhdl work "cactus_motion.vhd"
+vhdl work "Top.vhd"

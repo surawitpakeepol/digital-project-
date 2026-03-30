@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/XilinkProject/digital_01/game_graphics.xst" -ofn "C:/XilinkProject/digital_01/game_graphics.syr" 

@@ -1,0 +1,107 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml cactus_motion.twx cactus_motion.ncd -o cactus_motion.twr
+cactus_motion.pcf
+
+Design file:              cactus_motion.ncd
+Physical constraint file: cactus_motion.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock vsync
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+game_state<0>|    4.783(F)|      SLOW  |   -1.850(F)|      FAST  |vsync_BUFGP       |   0.000|
+game_state<1>|    5.267(F)|      SLOW  |   -1.280(F)|      FAST  |vsync_BUFGP       |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Clock vsync to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+cactus1_x<0> |         9.307(F)|      SLOW  |         5.059(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<1> |         8.860(F)|      SLOW  |         4.794(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<2> |         9.062(F)|      SLOW  |         4.942(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<3> |         9.086(F)|      SLOW  |         4.960(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<4> |         9.595(F)|      SLOW  |         5.373(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<5> |         9.098(F)|      SLOW  |         4.949(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<6> |         9.100(F)|      SLOW  |         4.969(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<7> |         9.077(F)|      SLOW  |         4.961(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<8> |         9.242(F)|      SLOW  |         5.067(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<9> |         8.742(F)|      SLOW  |         4.699(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<10>|         9.452(F)|      SLOW  |         5.213(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus1_x<11>|         9.200(F)|      SLOW  |         5.025(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<0> |         8.846(F)|      SLOW  |         4.736(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<1> |         8.586(F)|      SLOW  |         4.614(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<2> |         8.765(F)|      SLOW  |         4.755(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<3> |         9.057(F)|      SLOW  |         4.976(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<4> |         8.897(F)|      SLOW  |         4.854(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<5> |         9.326(F)|      SLOW  |         5.128(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<6> |         9.394(F)|      SLOW  |         5.187(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<7> |         9.375(F)|      SLOW  |         5.174(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<8> |         9.136(F)|      SLOW  |         5.004(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<9> |         9.116(F)|      SLOW  |         5.047(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<10>|         9.450(F)|      SLOW  |         5.234(F)|      FAST  |vsync_BUFGP       |   0.000|
+cactus2_x<11>|         9.419(F)|      SLOW  |         5.203(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<0> |         8.016(F)|      SLOW  |         4.354(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<1> |         7.859(F)|      SLOW  |         4.201(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<2> |         8.827(F)|      SLOW  |         4.814(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<3> |         8.884(F)|      SLOW  |         4.807(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<4> |         8.696(F)|      SLOW  |         4.695(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<5> |         7.911(F)|      SLOW  |         4.315(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<6> |         7.768(F)|      SLOW  |         4.157(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<7> |         7.336(F)|      SLOW  |         3.869(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<8> |         7.488(F)|      SLOW  |         3.966(F)|      FAST  |vsync_BUFGP       |   0.000|
+score_val<9> |         7.655(F)|      SLOW  |         4.095(F)|      FAST  |vsync_BUFGP       |   0.000|
+type1<0>     |         8.600(F)|      SLOW  |         4.653(F)|      FAST  |vsync_BUFGP       |   0.000|
+type1<1>     |         8.411(F)|      SLOW  |         4.540(F)|      FAST  |vsync_BUFGP       |   0.000|
+type2<0>     |         7.417(F)|      SLOW  |         3.924(F)|      FAST  |vsync_BUFGP       |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock vsync
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+vsync          |         |         |         |    4.649|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Mar 29 17:29:32 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4585 MB
+
+
+

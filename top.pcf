@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Mar 30 16:03:50 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P123" LEVEL 1;
+COMP "hsync" LOCATE = SITE "P14" LEVEL 1;
+COMP "btn_start" LOCATE = SITE "P141" LEVEL 1;
+COMP "vsync" LOCATE = SITE "P11" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "P16" LEVEL 1;
+COMP "rgb<1>" LOCATE = SITE "P21" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "P23" LEVEL 1;
+COMP "btn_jump" LOCATE = SITE "P143" LEVEL 1;
+TIMEGRP U0_clkfx_raw = BEL "U0/U_BUFG" BEL "U1/v_cnt_9" BEL "U1/v_cnt_8" BEL
+        "U1/v_cnt_7" BEL "U1/v_cnt_6" BEL "U1/v_cnt_5" BEL "U1/v_cnt_4" BEL
+        "U1/v_cnt_3" BEL "U1/v_cnt_2" BEL "U1/v_cnt_1" BEL "U1/v_cnt_0" BEL
+        "U1/h_cnt_9" BEL "U1/h_cnt_8" BEL "U1/h_cnt_7" BEL "U1/h_cnt_6" BEL
+        "U1/h_cnt_5" BEL "U1/h_cnt_4" BEL "U1/h_cnt_3" BEL "U1/h_cnt_2" BEL
+        "U1/h_cnt_1" BEL "U1/h_cnt_0";
+PIN U0/U_DCM_pins<1> = BEL "U0/U_DCM" PINNAME CLKIN;
+TIMEGRP clk = PIN "U0/U_DCM_pins<1>";
+TS_clk = PERIOD TIMEGRP "clk" 50 ns HIGH 50%;
+TS_U0_clkfx_raw = PERIOD TIMEGRP "U0_clkfx_raw" TS_clk / 1.25 HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,42 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-3
+top.ngc top.ngd
+
+Reading NGO file "C:/XilinkProject/digital_01/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "constraints.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clk', used in period specification 'TS_clk',
+   was traced into DCM_CLKGEN instance U0/U_DCM. The following new TNM groups
+   and period specifications were generated at the DCM_CLKGEN output(s): 
+   CLKFX: <TIMESPEC TS_U0_clkfx_raw = PERIOD "U0_clkfx_raw" TS_clk / 1.25 HIGH
+   50%>
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 4413304 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "top.bld"...
